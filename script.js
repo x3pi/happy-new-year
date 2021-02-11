@@ -23,7 +23,7 @@ function getRndInteger(min, max) {
 
 var randomWishes = function(){
   var type = getRndInteger(0,4)
-  var index = getRndInteger(0,9)
+  var index = getRndInteger(0,8)
   var w = null
   if(type == 0)w = wishes.td[index]
   if(type == 1)w = wishes.tt[index]
