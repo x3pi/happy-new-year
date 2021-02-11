@@ -15,9 +15,13 @@ var parseQueryString = function () {
 };
 
 var params = parseQueryString()
-if (params["ms"]) {
-  document.getElementById("ms").innerHTML = "Chúc "+ decodeURIComponent(window.atob(params["ms"]) +" một năm mới lung linh, rủng rỉnh, long lanh, lấp lánh! ")
-}
+var names = ""
+try{
+names = decodeURIComponent(window.atob(params["ms"]))
+}catch{}
+
+document.getElementById("ms").innerHTML = "Chúc "+ names +" một năm mới lung linh, rủng rỉnh, long lanh, lấp lánh!"
+
 document.addEventListener("click", event => {
   bursty(event.pageX, event.pageY);
 });
